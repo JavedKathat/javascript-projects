@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Number System Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="root">
+    <h1 class="title">Number System Calculator</h1>
+    <section>
+        <div class="option">
+                <span>
+                    <label for="typeFrom">Convert from:</label>
+                    <select id="typeFrom" onchange="update()">
+                        <option value="10">Decimal</option>
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="16">HexaDecimal</option>
+                    </select>
+                </span>
+            <span>
+                    <label for="typeTo">Convert to:</label>
+                    <select id="typeTo" onchange="update()">
+                        <option value="10" label="Decimal">Decimal</option>
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="16">HexaDecimal</option>
+                    </select>
+                </span>
+            <br /><br />
+            <span>
+                    <label for="input" id="inputType">Enter {Decimal}:</label>
+                    <input type="text" min="0" value="0" id="input" onkeyup="update()" />
+                </span>
+            <span>
+                    <label for="res" id="resultType">Result {Octal}:</label>
+                    <input id="res" onkeyup="reverse()" type="text" min="0" value="0" />
+                </span>
+            <br /><br />
+            <button onclick="clearFields()">Clear</button>
+            <button onclick="swapValues()">Swap</button>
+        </div>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
